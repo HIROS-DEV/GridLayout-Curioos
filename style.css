@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+	--hoverColor: #ff6569;
+	--header-background: #111111;
+	--header-textSize: 15px;
+	--header-textLineheight: 55px;
+	--header-textColor: #ffffff;
+	--header-buttonColor: #ff6569;
+	--header-buttonTextSize: 15px;
+	--header-buttonLineheight: 15px;
+	--main-headerFontSize: 20px;
+	--main-headerLineHeight: 20px;
+	--main-headerColor: #333333;
+	--main-GalleryHeaderText: 20px;
+	--main-GalleryHeaderLineHeight: 24.6px;
+	--main-GalleryImgFontSize: 17px;
+	--main-GalleryImgLineHeight: 20.9px;
+	--main-GalleryImgFontColor: #ffffff;
+	--review-fontSize: 17px;
+	--review-lineHeight: 14.2px;
+	--review-fontColor: #000000;
+	--review-backGround: #e7e7e7;
+	--review-reviewerFontSize: 15px;
+	--review-reviewerLineHeight: 12.5px;
+	--artist-h1FontSize: 34px;
+	--artist-h1LineHeight: 37.4px;
+	--artist-h1Color: #ffffff;
+	--artist-h2FontSize: 16px;
+	--artist-h2LineHeight: 22px;
+	--artist-h2Color: #ffffff;
+	--artist-pColor: #ffffff;
+	--artist-pFontSize: 15px;
+	--artist-pLineHeight: 18px;
+	--artist-buttonColor: #ffffff;
+	--artist-buttonBackGroundColor: #323232;
+	--main-GalleryBottomFontSizeOne: 17px;
+	--main-GalleryBottomFontSizeTwo: 16px;
+	--main-GalleryBottomLineHeight: 16px;
+	--main-GalleryBottomColor: #ffffff;
+	--main-BottomTitleFontSize: 15px;
+	--main-BottomTitleLineHeight: 12.5px;
+	--main-BottomTitleColor: #111111;
+	--main-BottomTextFontSize: 14px;
+	--main-BottomTextLineHeight: 11.7px;
+	--main-BottomTextColor: #111111;
+	--main-BottomDiscountColor: #ff636b;
+	--footer-FirstDivFontSize: 14px;
+	--footer-FirstDivLineHeight: 26px;
+	--footer-FirstDivColor: #ffffff;
+	--footer-MainFontSize: 14px;
+	--footer-MainLineHeight: 11.7px;
+	--footer-MainPrimaryColor: #ffffff;
+	--footer-MainSecondaryColor: #dddddd;
+	--footer-EmailFontSize: 19px;
+	--footer-EmailLineHeight: 15.8px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	grid-template-columns: repeat(3, 1fr);
+	background-color: var(--header-background);
+}
+
+header div,
+header nav {
+	display: grid;
+	gap: 20px;
+	grid-auto-flow: column;
+	align-items: center;
+}
+
+.header__searchContainer {
+	position: relative;
+}
+
+.header__searchContainer input {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #36332e;
+}
+
+.header__searchContainer input:focus {
+	outline: none;
+	color: white;
+}
+
+.header__searchContainer i {
+	padding: 0 10px;
+	position: absolute;
+	right: 0;
+	color: var(--header-textColor);
+	cursor: pointer;
+}
+
+.header__searchContainer i:hover {
+	color: var(--hoverColor);
+}
+
+header span {
+	color: var(--hoverColor);
+}
+
+header sup {
+	vertical-align: top;
+	position: relative;
+	top: -0.7em;
+	left: -1.2em;
+}
+
+header h1,
+header nav li a {
+	text-transform: uppercase;
+	color: var(--header-textColor);
+	font-size: var(--header-textSize);
+	line-height: var(--header-textLineheight);
+}
+
+header h1:hover,
+header nav li a:hover {
+	color: var(--hoverColor);
+}
+
+header nav button {
+	text-transform: uppercase;
+	border: 1px solid black;
+	padding: 10px;
+	font-size: var(--header-buttonTextSize);
+	color: var(--header-textColor);
+	line-height: var(--header-buttonLineheight);
+	background-color: var(--header-buttonColor);
+	cursor: pointer;
+}
+
+header nav button:hover {
+	background-color: #ba3d4a;
+}
+
+.nav__cart {
+	font-weight: lighter;
+}
+
+.main__main ul {
+	height: 5vh;
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.main__main ul li a {
+	text-transform: uppercase;
+	color: var(--main-headerColor);
+	line-height: var(--main-headerLineHeight);
+	font-size: var(--main-headerFontSize);
+}
+
+.main__main ul li a:hover {
+	color: var(--hoverColor);
+}
+
+.main__main ul li i {
+	padding: 0 5px;
+	vertical-align: middle;
+	position: relative;
+	top: -0.25em;
+}
+
+.main__main ul li sup {
+	vertical-align: top;
+	position: relative;
+	top: -0.7em;
+	color: var(--hoverColor);
+}
+
+.main__hero {
+	display: grid;
+	grid-template-columns: 1fr;
+	object-fit: cover;
+	overflow-x: hidden;
+}
+
+.main__hero img {
+	width: 100%;
+}
+
+section .main__gallery ul {
+	font-size: var(--main-GalleryHeaderText);
+	line-height: var(--main-GalleryHeaderLineHeight);
+	white-space: nowrap;
+	margin: 20px;
+}
+
+.main__imgGallery,
+.main__reviews {
+	max-width: 1200px;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0 auto;
+	display: grid;
+	gap: 20px;
+}
+
+.main__imgGallery div,
+.main__imgGalleryTwo div {
+	position: relative;
+}
+
+.main__imgGallery div:nth-child(1),
+.main__imgGallery div:nth-child(4),
+.main__imgGallery div:nth-child(5) {
+	grid-column: span 2;
+}
+
+.main__imgGallery div img {
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+}
+
+.main__imgGallery div p {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	padding-left: 10px;
+	bottom: 0;
+	width: 100%;
+	height: 4vh;
+	background-color: rgba(17, 17, 17, 0.5);
+	text-transform: uppercase;
+	color: var(--main-GalleryImgFontColor);
+	font-size: var(--main-GalleryImgFontSize);
+	line-height: var(--main-GalleryImgLineHeight);
+}
+
+.reviews__title {
+	padding-top: 100px;
+	display: flex;
+	align-items: center;
+	grid-column: span 3;
+	width: 100%;
+	white-space: nowrap;
+}
+
+.reviews__title i {
+	margin: 0 10px;
+	padding-bottom: 2px;
+}
+
+.reviews__title hr {
+	margin-left: 10px;
+	width: 100%;
+	height: 7px;
+	border: none;
+	background-color: var(--review-backGround);
+}
+
+.reviews__container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 100px;
+	align-items: center;
+	justify-items: center;
+	background-color: var(--review-backGround);
+}
+
+.reviews__container i {
+	color: var(--hoverColor);
+}
+
+.reviews__container p {
+	padding: 0 15px;
+	margin-bottom: 50px;
+	font-size: var(--review-fontSize);
+	line-height: var(--review-lineHeight);
+	color: var(--review-fontColor);
+	font-weight: 300;
+}
+
+.reviews__container p:nth-child(3) {
+	font-size: var(--review-reviewerFontSize);
+	color: var(--review-fontColor);
+	line-height: var(--review-reviewerLineHeight);
+	font-weight: 500;
+}
+
+.main__artist {
+	display: grid;
+	max-width: 1200px;
+	padding: 100px 0;
+	margin: 0 auto;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.main__artist div h1 {
+	font-size: var(--artist-h1FontSize);
+	line-height: var(--artist-h1LineHeight);
+	color: var(--artist-h1Color);
+	font-family: 'Oswald', sans-serif;
+}
+
+.main__artist div:nth-child(1) {
+	display: grid;
+	padding: 20px;
+	grid-template-columns: 1fr;
+	background-color: var(--hoverColor);
+}
+
+.main__artist div:nth-child(2) {
+	grid-column: 2/ 4;
+}
+
+.main__artist div img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.main__div {
+	display: grid;
+	align-items: center;
+	position: relative;
+}
+
+.main__div h1 {
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+}
+
+.artist_hr {
+	position: absolute;
+	width: 100px;
+	top: 20%;
+	left: 5%;
+}
+
+.main__div div h2 {
+	color: var(--artist-h2Color);
+	font-size: var(--artist-h2FontSize);
+	line-height: var(--artist-h2LineHeight);
+}
+
+.main__div div p {
+	color: var(--artist-pColor);
+	font-size: var(--artist-pFontSize);
+	line-height: var(--artist-pLineHeight);
+	font-weight: lighter;
+}
+
+.main__div div p:nth-child(3) {
+	padding-top: 30px;
+}
+
+.main__div button {
+	padding: 10px;
+	text-transform: uppercase;
+	background-color: var(--artist-buttonBackGroundColor);
+	color: var(--artist-buttonColor);
+	border: none;
+	cursor: pointer;
+}
+
+.main__imgGalleryTwo {
+	max-width: 1200px;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0 auto;
+	display: grid;
+	gap: 20px;
+}
+
+.main__imgGalleryTwo img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.main__imgGalleryTwo div div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: absolute;
+	padding-left: 10px;
+	bottom: 0;
+	width: 100%;
+	height: 5vh;
+	margin: 5px 0;
+	background-color: rgba(17, 17, 17, 0.5);
+	text-transform: uppercase;
+	color: var(--main-GalleryImgFontColor);
+	font-size: var(--main-GalleryImgFontSize);
+	line-height: var(--main-GalleryImgLineHeight);
+}
+
+.main__imgGalleryTwo div div p:nth-child(1) {
+	font-size: var(--main-GalleryBottomFontSizeOne);
+	color: var(--main-GalleryBottomColor);
+	line-height: var(--main-GalleryBottomLineHeight);
+	text-transform: capitalize;
+}
+
+.main__imgGalleryTwo div div p:nth-child(2) {
+	font-size: var(--main-GalleryBottomFontSizeTwo);
+	color: var(--main-GalleryBottomColor);
+	line-height: var(--main-GalleryBottomLineHeight);
+	text-transform: capitalize;
+	font-weight: lighter;
+	margin-top: 5px;
+}
+
+.main__bottom {
+	height: 7vh;
+	grid-template-columns: 1fr;
+	padding: 0 100px;
+	display: grid;
+	align-items: center;
+	background-color: #ececec;
+	background-image: url('https://curioos.azureedge.net/Content/Img/gift-footer.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.main__bottom div {
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	color: var(--main-BottomTextColor);
+	font-size: var(--main-BottomTitleFontSize);
+	line-height: var(--main-BottomTitleLineHeight);
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+.main__bottom div i {
+	margin-right: 5px;
+}
+
+.main__bottom p {
+	color: var(--main-BottomTextColor);
+	font-size: var(--main-BottomTextFontSize);
+	line-height: var(--main-BottomTextLineHeight);
+	font-weight: lighter;
+}
+
+.main__bottom p span {
+	color: var(--main-BottomDiscountColor);
+	font-weight: bold;
+}
+
+footer {
+	display: grid;
+	padding: 50px 100px;
+	gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	background-color: #252525;
+	color: white;
+	align-items: center;
+	justify-content: center;
+}
+
+footer > div:nth-child(1) {
+	font-size: var(--footer-FirstDivFontSize);
+	color: var(--footer-FirstDivColor);
+	line-height: var(--footer-FirstDivLineHeight);
+	font-weight: lighter;
+}
+
+footer > div:nth-child(2) > div,
+footer > div:nth-child(3) > div,
+footer > div:nth-child(4) > div {
+	height: 5vh;
+	display: flex;
+	align-items: center;
+}
+
+footer > div:nth-child(2) > div i,
+footer > div:nth-child(3) > div i,
+footer > div:nth-child(4) > div i {
+	margin-right: 10px;
+}
+
+footer > div:nth-child(2) > div h1,
+footer > div:nth-child(3) > div h1,
+footer > div:nth-child(4) > div h1 {
+	font-size: var(--footer-MainFontSize);
+	color: var(--footer-MainPrimaryColor);
+	line-height: var(--footer-MainLineHeight);
+}
+
+footer > div:nth-child(2) > p,
+footer > div:nth-child(3) > p,
+footer > div:nth-child(4) > p {
+	font-weight: lighter;
+	font-size: var(--footer-MainFontSize);
+	line-height: var(--footer-MainLineHeight);
+	color: var(--footer-MainSecondaryColor);
+}
+
+footer span {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+footer span:hover {
+	color: var(--hoverColor);
+}
+
+.footer__email {
+	grid-column: span 4;
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.email__title,
+.email__text {
+	grid-column: span 2;
+}
+
+.email__title div {
+	display: flex;
+	align-items: center;
+	padding-top: 20px;
+}
+
+.email__title > h1 {
+	color: var(--footer-MainPrimaryColor);
+	font-size: var(--footer-MainFontSize);
+	line-height: var(--footer-MainLineHeight);
+}
+
+.email__title div h1 {
+	margin: 0 5px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	color: var(--footer-MainSecondaryColor);
+	font-size: var(--footer-EmailFontSize);
+	line-height: var(--footer-EmailLineHeight);
+}
+
+.email__title div i {
+	color: var(--hoverColor);
+}
+
+.email__text{
+    padding-left: 10px;
+}
+
+.email__text > h1 span {
+	font-weight: lighter;
+	color: var(--footer-MainSecondaryColor);
+	font-size: var(--footer-MainFontSize);
+	line-height: var(--footer-MainLineHeight);
+}
+
+footer button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	background-color: var(--hoverColor);
+	color: var(--artist-buttonColor);
+	border: none;
+	cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 13px;
+    font-weight: 10.8px;
+    cursor: pointer;
+}
+
+.footer:hover {
+    text-decoration: underline;
+}
